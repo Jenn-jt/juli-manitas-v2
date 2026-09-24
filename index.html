@@ -111,15 +111,13 @@ body.menu-open .logo-dark{display:none}
 body.menu-open .logo-light{display:block}
 .burger{display:none;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-10px;padding:0;border:0;background:transparent;cursor:pointer;color:var(--ink)}
 .burger-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-.burger-lines{position:relative;width:24px;height:16px}
-.burger-lines i{position:absolute;left:0;width:100%;height:1.5px;background:currentColor;transition:transform .35s,top .35s,opacity .2s}
-.burger-lines i:nth-child(1){top:0}
-.burger-lines i:nth-child(2){top:7.25px}
-.burger-lines i:nth-child(3){top:14.5px}
+.burger-lines{position:relative;width:26px;height:10px}
+.burger-lines i{position:absolute;right:0;width:100%;height:1.5px;background:currentColor;transition:transform .35s,top .35s,width .35s}
+.burger-lines i:first-child{top:0}
+.burger-lines i:last-child{top:8.5px;width:70%}
 body.menu-open .burger{color:var(--on-dark)}
-body.menu-open .burger-lines i:nth-child(1){top:7.25px;transform:rotate(45deg)}
-body.menu-open .burger-lines i:nth-child(2){opacity:0}
-body.menu-open .burger-lines i:nth-child(3){top:7.25px;transform:rotate(-45deg)}
+body.menu-open .burger-lines i:first-child{top:4.25px;transform:rotate(45deg)}
+body.menu-open .burger-lines i:last-child{top:4.25px;width:100%;transform:rotate(-45deg)}
 
 .menu{position:fixed;z-index:49;inset:var(--nav-h,70px) 0 0 0;background:var(--dark);color:var(--on-dark);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;overflow-y:auto}
 body.menu-open .menu{opacity:1;visibility:visible}
@@ -421,7 +419,7 @@ footer{background:var(--dark);color:var(--on-dark-2);font-size:var(--fs-6);paddi
     <a href="#top" class="logo" aria-label="Juli Manitas, ir al inicio"><img class="logo-dark" src="img/logo-juli-manitas.png" alt="Juli Manitas" width="394" height="300"><img class="logo-light" src="img/logo-juli-manitas-blanco.png" alt="" width="394" height="300"></a>
     <div class="nav-actions">
       <a href="#presupuesto" class="btn btn-dark">Pedir presupuesto</a>
-      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu"><span class="burger-label" id="burgerLabel">Menú</span><span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span></button>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu"><span class="burger-label" id="burgerLabel">Menú</span><span class="burger-lines" aria-hidden="true"><i></i><i></i></span></button>
     </div>
   </div>
 </header>
